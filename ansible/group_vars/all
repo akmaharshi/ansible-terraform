@@ -1,0 +1,22 @@
+# Here are variables related to the standalone JBoss installation
+
+http_port: 8080
+https_port: 8443
+
+# AWS specific variables
+ec2_access_key: AKIA2I55HR6S47EVXW74
+ec2_secret_key: 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
+ec2_region: us-east-1
+ec2_zone: us-east-1e
+ec2_image: ami-09d95fab7fff3776c
+ec2_instance_type: t2.micro
+ec2_security_group: sg-003058bf0fd1111e1
+ec2_keypair: rishi
+ec2_instance_count: 2
+ec2_tag: demo
+ec2_tag_name_prefix: dj
+ec2_hosts: all
+wait_for_port: 22
+
+# This user name will be set by Tower, when run through Tower
+tower_user_name: admin

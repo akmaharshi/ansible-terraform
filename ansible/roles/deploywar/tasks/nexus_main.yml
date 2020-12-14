@@ -1,0 +1,9 @@
+---
+- name: Deploy war file from tomcat
+  get_url: 
+    url: http://192.168.0.10:8081/nexus/content/repositories/snapshots/org/springframework/samples/spring-petclinic/4.2.6-SNAPSHOT/spring-petclinic-4.2.6-20200615.050740-1.war
+    dest: "{{ TOMCAT_HOME }}/webapps/petclinic.war"
+    url_username: "{{ NEXUS_USER }}"
+    url_password: "{{ NEXUS_PASS }}"
+    validate_certs: no
+  notify: restart tomcat
