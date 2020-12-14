@@ -10,7 +10,7 @@ data "aws_ami" "amazon-linux-2" {
 
 
 resource "aws_launch_configuration" "my-test-launch-config" {
-  image_id        = data.aws_ami.amazon-linux-2.id
+  image_id        = "data.aws_ami.amazon-linux-2.id"
   instance_type   = "${var.instance_type}"
   security_groups = ["${aws_security_group.my-asg-sg.id}"]
   key_name = "mykey"
